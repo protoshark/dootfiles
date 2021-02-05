@@ -1,0 +1,16 @@
+{
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+
+  "emmet.includeLanguages": {
+     "jsp": "html",
+     "vue": "html"
+  },
+  "coc.preferences.colorSupport": false,
+
+  "Lua.runtime.version": "LuaJIT",
+  "Lua.diagnostics.globals": [ "vim", "vimp", "use" ],
+  "Lua.workspace.library": {
+    "/usr/local/share/nvim/runtime/lua": true,
+    "/usr/local/share/nvim/runtime/lua/vim/lsp": true
+  }
+}

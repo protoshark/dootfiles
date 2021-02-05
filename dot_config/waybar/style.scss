@@ -1,0 +1,166 @@
+/// NOTE: COLORS AUTO-GENERATED (DON'T CHANGE THESE LINES)
+$color0: #11151F;
+$color1: #78a9ed;
+$color2: #5063a6;
+$color3: #c26c81;
+$color4: #696aa8;
+$color5: #4d568f;
+$color6: #4f629b;
+$color7: #a4aab5;
+$color8: #6d737e;
+$color9: #264b86;
+$color10: #223b74;
+$color11: #8d4155;
+$color12: #3d4176;
+$color13: #202e5f;
+$color14: #22396a;
+$color15: #f1f4fc;
+
+$bg: $color0;
+$fg: $color15;
+$fg-dim: lighten($bg, 41%);
+
+$ws-btn-bg: lighten($color0, 3%);
+
+$bd-radius: 3px;
+
+$shadow: 0 0 8px -3px rgba(#000, .6), inset 0 0 3px -3px rgba($color1, .17);
+
+
+* {
+  border: none;
+  font-size: 12px;
+  font-family: "Noto Sans Display", "Material";
+  text-shadow: none;
+  min-height: 0px; // fake min height;
+  margin: 1px 0;
+}
+
+window#waybar {
+  color: $fg;
+  background: darken($bg, 1%);
+}
+
+tooltip {
+  background: rgba($bg, .96);
+  padding: 0;
+
+  label {
+    padding: 0 15px;
+    margin: 0;
+
+    font-family: "Liberation Sans";
+
+    font-size: 14px;
+  }
+}
+
+/// LEFT
+#workspaces, #taskbar {
+  min-height: 0;
+  background-color: lighten($bg, 1%);
+  border-radius: $bd-radius;
+  box-shadow: $shadow;
+
+  margin: 0 3px;
+  padding: 0;
+
+  button {
+    margin: 0px;
+    padding: 1px 7px;
+
+    color: $fg-dim;
+    background-color: transparent;
+    border-radius: 0;
+
+    &:hover {
+      color: $fg;
+      background: initial;
+      background-color: lighten($ws-btn-bg, 10%);
+    }
+
+    &.focused {
+      color: $fg;
+      // border-bottom: 1px solid $color1;
+      background: rgba($color1, .1);
+      // box-shadow: inset 0px -4px 3px -4px $color1; // glow effect
+
+      &:hover {
+        background-color: lighten($ws-btn-bg, 10%);
+      }
+    }
+
+    &.urgent {
+      color: $color1;
+    }
+  }
+}
+
+/// CENTER
+#clock {
+  // left empty
+}
+
+/// RIGHT
+#battery,
+#pulseaudio,
+#tray,
+#network {
+  margin: 0 3px 0 0 ;
+  padding: 0 10px;
+  font-size: 13px;
+  box-shadow: 0 0 8px -3px rgba(#000, .6), inset 0 0 3px -3px rgba($color1, .17);
+
+  background: lighten($bg, 1%);
+  color: $bg;
+  border-radius: $bd-radius;
+}
+
+#network {
+  background: #C792EA;
+}
+
+#tray {
+  // border-radius: $bd-radius;
+
+}
+
+#pulseaudio {
+  // border-top-left-radius: $bd-radius;
+  // border-bottom-left-radius: $bd-radius;
+  background: #FFCB6B
+}
+
+
+@keyframes #{batflow} {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes #{batblink} {
+  from {
+    background-color: #FF0000;
+    color: $color15;
+  }
+  to {
+    background-color: #0000FF;
+    color: $color0;
+  }
+}
+
+#battery {
+  background: #82AAFF;
+
+  &.critical:not(.charging) {
+    animation: #{batblink} .4s linear infinite alternate;
+  }
+
+  &.charging {
+    background: linear-gradient(90deg, $color4, $color12, $color4, $color12);
+    background-size: 300% 100%;
+    animation: #{batflow} 2s linear infinite;
+  }
+}

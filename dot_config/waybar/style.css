@@ -1,0 +1,108 @@
+* {
+  border: none;
+  font-size: 12px;
+  font-family: "Noto Sans Display", "Material";
+  text-shadow: none;
+  min-height: 0px;
+  margin: 1px 0;
+}
+
+window#waybar {
+  color: #f1f4fc;
+  background: #0f131c;
+}
+
+tooltip {
+  background: rgba(17, 21, 31, 0.96);
+  padding: 0;
+}
+tooltip label {
+  padding: 0 15px;
+  margin: 0;
+  font-family: "Liberation Sans";
+  font-size: 14px;
+}
+
+#workspaces, #taskbar {
+  min-height: 0;
+  background-color: #131722;
+  border-radius: 3px;
+  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.6), inset 0 0 3px -3px rgba(120, 169, 237, 0.17);
+  margin: 0 3px;
+  padding: 0;
+}
+#workspaces button, #taskbar button {
+  margin: 0px;
+  padding: 1px 7px;
+  color: #5c71a5;
+  background-color: transparent;
+  border-radius: 0;
+}
+#workspaces button:hover, #taskbar button:hover {
+  color: #f1f4fc;
+  background: initial;
+  background-color: #28324a;
+}
+#workspaces button.focused, #taskbar button.focused {
+  color: #f1f4fc;
+  background: rgba(120, 169, 237, 0.1);
+}
+#workspaces button.focused:hover, #taskbar button.focused:hover {
+  background-color: #28324a;
+}
+#workspaces button.urgent, #taskbar button.urgent {
+  color: #78a9ed;
+}
+
+#battery,
+#pulseaudio,
+#tray,
+#network {
+  margin: 0 3px 0 0;
+  padding: 0 10px;
+  font-size: 13px;
+  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.6), inset 0 0 3px -3px rgba(120, 169, 237, 0.17);
+  background: #131722;
+  color: #11151F;
+  border-radius: 3px;
+}
+
+#network {
+  background: #C792EA;
+}
+
+#pulseaudio {
+  background: #FFCB6B;
+}
+
+@keyframes batflow {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes batblink {
+  from {
+    background-color: #FF0000;
+    color: #f1f4fc;
+  }
+  to {
+    background-color: #0000FF;
+    color: #11151F;
+  }
+}
+#battery {
+  background: #82AAFF;
+}
+#battery.critical:not(.charging) {
+  animation: batblink 0.4s linear infinite alternate;
+}
+#battery.charging {
+  background: linear-gradient(90deg, #696aa8, #3d4176, #696aa8, #3d4176);
+  background-size: 300% 100%;
+  animation: batflow 2s linear infinite;
+}
+
+/*# sourceMappingURL=style.css.map */

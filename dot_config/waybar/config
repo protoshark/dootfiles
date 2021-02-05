@@ -1,0 +1,98 @@
+// vim:ft=jsonc
+{
+  /// Settings
+  "position": "top",
+  "modules-left": [
+      "sway/workspaces",
+      "wlr/taskbar"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "tray",
+    "pulseaudio",
+    "battery#bat1",
+  ],
+
+  /// Modules configuration
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": false,
+    "format": "{icon}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    }
+  },
+  "wlr/taskbar": {
+  	"format": "{icon}",
+    "max-legth": 10,
+  	"icon-size": 14,
+  	"icon-theme": "Win10Sur-black-dark",
+  	"tooltip-format": "{title}",
+  	"on-click": "activate",
+  	"on-click-middle": "close"
+  },
+
+
+  "clock": {
+    "format": "{: %a %d %b - %H:%M}",
+    "format-alt": "{: %a, %b %d}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "network": {
+    "interface": "wlan0",
+    "format": "",
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "tooltip-format": "Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 10,
+    "interval": 25
+  },
+
+  "tray": {
+    "spacing": 10,
+    "icon-size": 12
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%   {format_source}",
+    "format-muted": "<big></big> {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "exec alacritty --class floatty -e 'pulsemixer'",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+  },
+  "battery#bat1": {
+    "bat": "BAT1",
+
+    "states": {
+      "warning": 25,
+      "critical": 15
+    },
+    "format": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-full": " 100% - Charged"
+  },
+}

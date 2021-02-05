@@ -1,0 +1,24 @@
+add_newline = false
+
+format = """
+$username\
+$hostname\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$cmd_duration\
+$jobs\
+$battery\
+$character"""
+
+[character]
+success_symbol = "[❯](bold purple)"
+
+[username]
+disabled = false
+format = "[$user]($style)"

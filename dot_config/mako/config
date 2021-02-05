@@ -1,0 +1,27 @@
+font= Roboto 10
+
+background-color=#0F111AC0
+progress-color=over #88AAFF
+
+text-color=#fafafa
+padding=7
+margin=10
+
+height=100
+width=350
+
+anchor=top-right
+
+border-size=1
+border-radius=8
+border-color=#25242FD2
+
+actions=1
+
+icons=1
+icon-path=/usr/share/icons/Papirus-dark/
+
+default-timeout=7000
+
+[urgency=high]
+ignore-timeout=1

@@ -1,0 +1,139 @@
+* {
+  border: none;
+  font-size: 11px;
+  margin: 1px 2px;
+  font-family: "Source Sans Pro", "SauceCodePro Nerd Font", "Material";
+  font-weight: bold;
+  min-height: 0px;
+}
+
+window#waybar {
+  color: #fafafa;
+  background-color: #000;
+  min-width: 30px;
+}
+
+#workspaces {
+  background-color: transparent;
+}
+#workspaces button {
+  margin: 2px -2px;
+  padding: 7px 3px;
+
+  color: #bababa;
+  background-color: #202020;
+
+  box-shadow: 0 0 5px -3px rgba(0, 0, 0, 0.6),
+    inset 0 0 3px -3px rgba(255, 255, 255, 0.08);
+
+  border-radius: 3px;
+}
+
+#workspaces button:first-child {
+    margin-top: 0;
+}
+
+#workspaces button.focused {
+    color: #000;
+    background: #fff;
+}
+
+#workspaces button.urgent {
+  color: #f18483;
+}
+#workspaces button:hover {
+  color: #fff;
+  background: rgba(75, 75, 75, 0.726);
+
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+#taskbar button {
+  padding: 0;
+  border-radius: 2px;
+}
+
+#taskbar button.active {
+  border-left: 2px solid #56f26A
+}
+
+#taskbar button.minimized {
+  background-color: #131313;
+}
+
+#taskbar button:hover {
+  background-color: rgba(100, 100, 100, .3)
+}
+
+/* WIDGETS */
+#mode,
+#battery,
+#pulseaudio,
+#backlight,
+#tray,
+#clock {
+  color: #171b27;
+  background-color: #000;
+
+  margin: 2px 0px;
+  padding: 5px 3px;
+
+  box-shadow: 0 0 5px -3px rgba(0, 0, 0, 0.6),
+    inset 0 0 3px -3px rgba(255, 255, 255, 0.7);
+
+  border-radius: 3px;
+}
+
+#mode {
+  background-color: #ae82cb;
+}
+
+#battery {
+  background: linear-gradient(10deg, #BAF67E, #76AC70);
+}
+
+@keyframes flow {
+     0%{background-position: 0 0}
+    100%{background-position: 0 100%}
+}
+#battery.charging {
+  background: linear-gradient(0deg, #BAED7E, #76DC70, #BAED7E, #76DC70);
+  background-size: 100% 300%;
+  animation: flow 2s linear infinite;
+}
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#pulseaudio {
+  background: linear-gradient(30deg, #95F0CB, #4CB0C5);
+}
+#pulseaudio.muted {
+  background: linear-gradient(30deg, #F27983, #FFEE99);
+}
+
+#tray {
+  color: #dfdfdf;
+  background-color: #202020;
+
+  box-shadow: 0 0 5px -3px rgba(0, 0, 0, 0.6),
+    inset 0 0 3px -3px rgba(255, 255, 255, 0.1);
+}
+
+#clock {
+  background: linear-gradient(30deg, #FFEE99, #FFA759);
+  font-weight: bolder;
+}
