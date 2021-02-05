@@ -28,3 +28,6 @@ Once `chezmoi` is installed, you can clone my dots with
 ```sh
 chezmoi init https://github.com/protoshark/dootfiles.git
 ```
+
+
+Use `chezmoi apply` to apply the configurations.
