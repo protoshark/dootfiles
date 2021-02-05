@@ -16,7 +16,8 @@ This repository contains config files for:
 ## Instalation
 
 Check out the official `chezmoi` [instalation guide](https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md).
-On Arch, chezmoi is available on the community repository and can be installed running
+
+On Arch, `chezmoi` is available on the community repository and can be installed running
 
 ```sh
 pacman -S chezmoi
