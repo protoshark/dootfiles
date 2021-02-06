@@ -37,6 +37,8 @@ opt('w', 'wrap', false)
 opt('w', 'list', true)
 opt('w', 'listchars', 'extends:›,precedes:‹,nbsp:␣,trail:-,tab:→ ,eol:¬')
 
+opt('o', 'path', vim.o.path .. 'src/**,tests/**')
+
 opt('o', 'termguicolors', true)
 
 opt('o', 'backup', false)
