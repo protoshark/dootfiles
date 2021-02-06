@@ -68,6 +68,10 @@ set -g man_standout -o bryellow
 # Wine
 #set -x WINEPREFIX $HOME/docs/wine
 
+# Less
+set -x LESSKEY      "$XDG_CONFIG_HOME"/less/lesskey
+set -x LESSHISTFILE "$XDG_CACHE_HOME"/less/history
+
 # }}}1
 
 # ALIASES ................................................................. {{{1
