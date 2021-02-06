@@ -1,7 +1,7 @@
 # vim:tabstop=2 shiftwidth=2
 
 import:
-  - .config/alacritty/themes/PalenightAlt.yml
+  - .config/alacritty/themes/Nord.yml
 
 window:
   dimensions:
