@@ -65,12 +65,17 @@ set -g man_bold -o brgreen
 set -g man_underline -o yellow
 set -g man_standout -o bryellow
 
+# }}}
+
 # Wine
 #set -x WINEPREFIX $HOME/docs/wine
 
 # Less
 set -x LESSKEY      "$XDG_CONFIG_HOME"/less/lesskey
 set -x LESSHISTFILE "$XDG_CACHE_HOME"/less/history
+
+# GPG
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 # }}}1
 
