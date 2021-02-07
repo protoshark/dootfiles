@@ -33,8 +33,6 @@ require'packer'.startup(
         use 'romainl/vim-cool'
         -- calculations
         use { 'arecarn/vim-crunch', requires = 'arecarn/vim-selection' }
-        -- path intelisense
-        use { 'liuchengxu/vim-clap', run = ':Clap install-binary' }
         -- js/ts import size
         use {
             'yardnsm/vim-import-cost',
@@ -101,5 +99,8 @@ require'packer'.startup(
         use 'pineapplegiant/spaceduck'
         use 'kjssad/quantum.vim'
         use 'kaicataldo/material.vim'
+        use 'teloe/bland.vim'
+        use 'gustavo-hms/garbo'
+        use 'ajmwagar/vim-deus'
     end
 )
