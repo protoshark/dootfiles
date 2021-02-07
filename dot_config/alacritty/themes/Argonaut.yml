@@ -1,7 +1,5 @@
+# Colors (Argonaut)
 colors:
-  primary:
-    background: '#0e1019'
-    foreground: '#fffaf4'
   bright:
     black: '#444444'
     blue: '#0092ff'
@@ -11,6 +9,9 @@ colors:
     red: '#ff2740'
     white: '#ffffff'
     yellow: '#ffd242'
+  cursor:
+    cursor: '#ff0018'
+    text: '#ff0018'
   normal:
     black: '#232323'
     blue: '#008df8'
@@ -20,3 +21,9 @@ colors:
     red: '#ff000f'
     white: '#ffffff'
     yellow: '#ffb900'
+  primary:
+    background: '#0e1019'
+    foreground: '#fffaf4'
+  selection:
+    background: '#002a3b'
+    text: '#ffffff'
