@@ -15,7 +15,7 @@ font:
   normal:
     family: Sometype Mono Medium
 
-  size: 10
+  size: 11
 
 mouse:
   hide_when_typing: true
