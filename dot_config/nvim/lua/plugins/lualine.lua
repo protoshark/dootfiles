@@ -1,6 +1,6 @@
 return function()
   local line = require('lualine')
-  line.theme = 'onedark'
+  line.theme = 'gruvbox'
   line.status()
 end
 

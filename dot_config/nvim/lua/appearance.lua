@@ -12,4 +12,4 @@ cmd 'autocmd VimEnter * hi illuminatedWord guibg=#20202090 cterm=bold gui=bold'
 -- vim.g.material_theme_style = 'palenight-community'
 -- vim.g.material_terminal_italics = 1
 
-cmd 'color dalton'
+cmd 'color gruvbox'
