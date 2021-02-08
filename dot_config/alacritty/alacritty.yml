@@ -1,12 +1,12 @@
 # vim:tabstop=2 shiftwidth=2
 
 import:
-  - .config/alacritty/themes/Wombat.yml
+  - .config/alacritty/themes/Red Planet.yml
 
 window:
   dimensions:
-    columns: 130
-    lines: 33
+    columns: 120
+    lines: 31
   padding:
     x: 4
     y: 4

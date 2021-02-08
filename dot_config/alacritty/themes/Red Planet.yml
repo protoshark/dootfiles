@@ -9,9 +9,6 @@ colors:
     red: '#b55242'
     white: '#d6bfb8'
     yellow: '#ebeb91'
-  cursor:
-    cursor: '#c2b790'
-    text: '#202020'
   normal:
     black: '#202020'
     blue: '#69819e'
@@ -24,6 +21,3 @@ colors:
   primary:
     background: '#222222'
     foreground: '#c2b790'
-  selection:
-    background: '#1b324a'
-    text: '#bcb291'
