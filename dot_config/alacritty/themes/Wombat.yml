@@ -9,9 +9,7 @@ colors:
     red: '#f58c80'
     white: '#ffffff'
     yellow: '#eee5b2'
-  cursor:
-    cursor: '#bbbbbb'
-    text: '#ffffff'
+
   normal:
     black: '#000000'
     blue: '#5da9f6'
