@@ -1,0 +1,65 @@
+#>>>>>>>>> ENV <<<
+
+#>>> XDG
+export XDG_DATA_DIRS="$HOME"/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share/
+
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+
+#>>> WAYLAND
+export MOZ_ENABLE_WAYLAND=1
+
+#>>> UTILS
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+
+#>>> GTK
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc-2.0
+
+#>>> JAVA
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+#>>> ASDF
+export ASDF_DATA_DIR="$XDG_DATA_HOME"/asdf
+export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME"/asdf/asdfrc
+
+#>>> NODE
+export SNM_DIR="$XDG_DATA_HOME"/snm
+
+#>>> PYTHON
+export PYLINTHOME="$XDG_DATA_HOME"/pylint
+
+#>>> RUST
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
+#>>> GO
+export GOPATH="$XDG_DATA_HOME"/go
+
+#>>> LESS
+export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+
+#>>> GPG
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
+#>>>>>>>>> ALIASES <<<
+
+alias vi='nvim'
+
+alias exa='exa --color=never'
+alias ls='exa --group-directories-first'
+alias l='exa --group-directories-first -al'
+alias la='exa --group-directories-first -a'
+alias ll='exa -alh'
+
+
+#>>>>>>>>> EXTERNAL <<<
+
+# Source ASDF
+[ -f "$ASDF_DATA_DIR"/asdf.sh ] && . "$ASDF_DATA_DIR"/asdf.sh
+
+# Bash prompt
+[ -f "$XDG_CONFIG_HOME"/bash/prompt.sh ] && . "$XDG_CONFIG_HOME"/bash/prompt.sh
