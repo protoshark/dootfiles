@@ -4,7 +4,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo " [${BRANCH}${STAT}]"
+		echo -e " \e[0;45m ${BRANCH}${STAT} \e[0m"
 	else
 		echo ""
 	fi
@@ -50,4 +50,4 @@ function nonzero_return() {
 	[ $RETVAL -ne 0 ] && echo "$RETVAL "
 }
 
-export PS1="\`nonzero_return\`[\u@\h:\w\`parse_git_branch\`]\\$ "
+export PS1="\`nonzero_return\`\u@\h:\W\`(parse_git_branch &)\` "

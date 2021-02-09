@@ -45,6 +45,17 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 #>>> GPG
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
+#>>> PATH
+export PATH="$ASDF_DATA_DIR"/shims:\
+"$ASDF_DATA_DIR"/bin:"$SNM_DIR"/aliases/default/bin:\
+"$HOME"/.local/bin/:"$CARGO_HOME"/bin:\
+"$HOME"/.scripts/:"$GOPATH"/bin:\
+"$SNM_DIR"/aliases/default/bin:\
+/usr/local/sbin:usr/local/bin:\
+/usr/bin:/usr/bin/site_perl:\
+/usr/bin/vendor_perl:\
+/usr/bin/core_perl
+
 #>>>>>>>>> ALIASES <<<
 
 alias vi='nvim'

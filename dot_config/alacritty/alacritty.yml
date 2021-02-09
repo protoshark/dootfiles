@@ -5,8 +5,8 @@ import:
 
 window:
   dimensions:
-    columns: 120
-    lines: 31
+    columns: 135
+    lines: 35
   padding:
     x: 4
     y: 4
