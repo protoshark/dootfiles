@@ -24,11 +24,11 @@ set $shot $HOME/.scripts/grimshot --notify
 set $altab $HOME/.config/sway/scripts/altab.py
 set $volume $HOME/.config/sway/scripts/vol.sh
 
-set $cl_high #3C3836
+set $cl_high #101010
 set $cl_indi #FA2573
-set $cl_back #292D3E
-set $cl_fore #d9d8d8
-set $cl_forh #11151F
+set $cl_back #000000
+set $cl_fore #ACACAC
+set $cl_forh #FAFAFA
 set $cl_urge #ee2e24
 
 #}}}

@@ -1,7 +1,7 @@
 # vim:tabstop=2 shiftwidth=2
 
 import:
-  - .config/alacritty/themes/Red Planet.yml
+  - .config/alacritty/themes/Builtin Tango Dark.yml
 
 window:
   dimensions:
@@ -15,7 +15,7 @@ font:
   normal:
     family: Sometype Mono Medium
 
-  size: 11
+  size: 10
 
 mouse:
   hide_when_typing: true
