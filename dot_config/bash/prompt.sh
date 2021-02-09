@@ -48,7 +48,7 @@ function parse_git_dirty {
 
 function nonzero_return() {
 	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo "$RETVAL "
+	[ $RETVAL -ne 0 ] && echo -e "\e[0;30;101m $RETVAL \e[0m "
 }
 
-export PS1="\`nonzero_return\`\e[0;91m\u@\h\e[0m \e[0;90m\W\e[0m\`(parse_git_branch &)\` "
+export PS1="\`nonzero_return\`\e[0;91m\u@\h\e[0m \e[0;90m\W\e[0m\`parse_git_branch\` "

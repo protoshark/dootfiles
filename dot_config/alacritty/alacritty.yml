@@ -24,4 +24,4 @@ mouse:
     modifiers: Control
 
 draw_bold_text_with_bright_colors: false
-background_opacity: 1
+background_opacity: .99

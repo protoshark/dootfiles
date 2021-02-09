@@ -47,14 +47,10 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 #>>> PATH
 export PATH="$ASDF_DATA_DIR"/shims:\
-"$ASDF_DATA_DIR"/bin:"$SNM_DIR"/aliases/default/bin:\
-"$HOME"/.local/bin/:"$CARGO_HOME"/bin:\
-"$HOME"/.scripts/:"$GOPATH"/bin:\
-"$SNM_DIR"/aliases/default/bin:\
-/usr/local/sbin:usr/local/bin:\
-/usr/bin:/usr/bin/site_perl:\
-/usr/bin/vendor_perl:\
-/usr/bin/core_perl
+"$ASDF_DATA_DIR"/bin:"$SNM_DIR"/aliases/default/bin:"$HOME"/.local/bin/:\
+"$CARGO_HOME"/bin:"$HOME"/.scripts/:"$GOPATH"/bin:\
+"$SNM_DIR"/aliases/default/bin:"$PATH"
+
 
 #>>>>>>>>> ALIASES <<<
 
@@ -66,11 +62,7 @@ alias l='exa --group-directories-first -al'
 alias la='exa --group-directories-first -a'
 alias ll='exa -alh'
 
-
-#>>>>>>>>> EXTERNAL <<<
-
-# Source ASDF
-[ -f "$ASDF_DATA_DIR"/asdf.sh ] && . "$ASDF_DATA_DIR"/asdf.sh
-
 # Bash prompt
 [ -f "$XDG_CONFIG_HOME"/bash/prompt.sh ] && . "$XDG_CONFIG_HOME"/bash/prompt.sh
+# ASDF
+[ -f "$ASDF_DATA_DIR"/asdf.sh ] && . "$ASDF_DATA_DIR"/asdf.sh

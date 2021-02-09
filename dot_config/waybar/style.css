@@ -8,12 +8,12 @@
 }
 
 window#waybar {
-  color: #f1f4fc;
-  background: #0f131c;
+  color: #eeeeec;
+  background: black;
 }
 
 tooltip {
-  background: rgba(17, 21, 31, 0.96);
+  background: rgba(3, 3, 3, 0.96);
   padding: 0;
 }
 tooltip label {
@@ -25,33 +25,33 @@ tooltip label {
 
 #workspaces, #taskbar {
   min-height: 0;
-  background-color: #131722;
+  background-color: #060606;
   border-radius: 3px;
-  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.6), inset 0 0 3px -3px rgba(120, 169, 237, 0.17);
+  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.6), inset 0 0 3px -3px rgba(119, 119, 119, 0.17);
   margin: 0 3px;
   padding: 0;
 }
 #workspaces button, #taskbar button {
   margin: 0px;
   padding: 1px 7px;
-  color: #5c71a5;
+  color: #6c6c6c;
   background-color: transparent;
   border-radius: 0;
 }
 #workspaces button:hover, #taskbar button:hover {
-  color: #f1f4fc;
+  color: #eeeeec;
   background: initial;
-  background-color: #28324a;
+  background-color: #242424;
 }
 #workspaces button.focused, #taskbar button.focused {
-  color: #f1f4fc;
-  background: rgba(120, 169, 237, 0.1);
+  color: #eeeeec;
+  background: rgba(119, 119, 119, 0.1);
 }
 #workspaces button.focused:hover, #taskbar button.focused:hover {
-  background-color: #28324a;
+  background-color: #242424;
 }
 #workspaces button.urgent, #taskbar button.urgent {
-  color: #78a9ed;
+  color: #777777;
 }
 
 #battery,
@@ -61,9 +61,9 @@ tooltip label {
   margin: 0 3px 0 0;
   padding: 0 10px;
   font-size: 13px;
-  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.6), inset 0 0 3px -3px rgba(120, 169, 237, 0.17);
-  background: #131722;
-  color: #11151F;
+  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.6), inset 0 0 3px -3px rgba(119, 119, 119, 0.17);
+  background: #060606;
+  color: #030303;
   border-radius: 3px;
 }
 
@@ -86,11 +86,11 @@ tooltip label {
 @keyframes batblink {
   from {
     background-color: #FF0000;
-    color: #f1f4fc;
+    color: #eeeeec;
   }
   to {
     background-color: #0000FF;
-    color: #11151F;
+    color: #030303;
   }
 }
 #battery {

@@ -17,16 +17,17 @@ set $menu nwggrid -o 0.90 -b '#000000'
 set $gnome-schema org.gnome.desktop.interface
 set $exec exec --no-startup-id exec fish
 
-set $wobcmd wob -b 0 -p 0 -H 15 -o 6 --background-color '#CF000000' --bar-color '#FA1AFB96'
+# set $wobcmd wob -b 0 -p 0 -H 15 -o 6 --background-color '#CF000000' --bar-color '#FA1AFB96'
+set $wobcmd ''
 
 set $shot $HOME/.scripts/grimshot --notify
 
 set $altab $HOME/.config/sway/scripts/altab.py
 set $volume $HOME/.config/sway/scripts/vol.sh
 
-set $cl_high #101010
+set $cl_high #141414
 set $cl_indi #FA2573
-set $cl_back #000000
+set $cl_back #030303
 set $cl_fore #ACACAC
 set $cl_forh #FAFAFA
 set $cl_urge #ee2e24
@@ -59,13 +60,13 @@ set $cl_urge #ee2e24
     }
 
     # Progress csd
-    exec_always {
-        # End previous wob pipes
-        killall tail
-        mkfifo $SWAYSOCK.wob
-        while $(pgrep tail); do sleep 1; done
-        tail -f $SWAYSOCK.wob | $wobcmd
-    }
+    # exec_always {
+    #     # End previous wob pipes
+    #     killall tail
+    #     mkfifo $SWAYSOCK.wob
+    #     while $(pgrep tail); do sleep 1; done
+    #     tail -f $SWAYSOCK.wob | $wobcmd
+    # }
 #}}}
 
 # Output configuration -------------- {{{
