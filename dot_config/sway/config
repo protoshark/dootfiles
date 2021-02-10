@@ -25,9 +25,9 @@ set $shot $HOME/.scripts/grimshot --notify
 set $altab $HOME/.config/sway/scripts/altab.py
 set $volume $HOME/.config/sway/scripts/vol.sh
 
-set $cl_high #141414
+set $cl_high #252A2F
 set $cl_indi #FA2573
-set $cl_back #030303
+set $cl_back #151A1F
 set $cl_fore #ACACAC
 set $cl_forh #FAFAFA
 set $cl_urge #ee2e24
@@ -52,12 +52,13 @@ set $cl_urge #ee2e24
     #exec nm-applet --indicator
 
     # GTK theme
-    exec_always {
-        gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-solid-alt'
-        gsettings set $gnome-schema icon-theme 'Win10Sur-black-dark'
-        gsettings set $gnome-schema cursor-theme 'default'
-        gsettings set $gnome-schema font-name 'Noto Sans Display'
-    }
+    # exec_always {
+    #     gsettings set $gnome-schema gtk-theme 'WhiteSur-dark-solid-alt'
+    #     gsettings set $gnome-schema icon-theme 'Win10Sur-black-dark'
+    #     gsettings set $gnome-schema cursor-theme 'default'
+    #     gsettings set $gnome-schema font-name 'Noto Sans Display'
+    # }
+    exec /usr/lib/gsd-xsettings
 
     # Progress csd
     # exec_always {
