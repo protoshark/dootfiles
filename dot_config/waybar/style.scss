@@ -1,12 +1,11 @@
-/// NOTE: COLORS AUTO-GENERATED (DON'T CHANGE THESE LINES)
-$color0: #030303;
-$color1: #777777;
+$color0: #191F22;
+$color1: #090F12;
 $color2: #5063a6;
 $color3: #c26c81;
 $color4: #696aa8;
 $color5: #4d568f;
 $color6: #4f629b;
-$color7: #a4aab5;
+$color7: #DADADA;
 $color8: #6d737e;
 $color9: #264b86;
 $color10: #223b74;
@@ -14,23 +13,23 @@ $color11: #8d4155;
 $color12: #3d4176;
 $color13: #202e5f;
 $color14: #22396a;
-$color15: #eeeeec;
+$color15: #F0F0F0;
 
-$bg: $color0;
+$bg: rgba($color0, .9);
 $fg: $color15;
-$fg-dim: lighten($bg, 41%);
+$fg-dim: $color7;
 
-$ws-btn-bg: lighten($color0, 3%);
+$ws-btn-bg: darken($color0, 30%);
 
 $bd-radius: 3px;
 
-$shadow: 0 0 8px -3px rgba(#000, .6), inset 0 0 3px -3px rgba($color1, .17);
+$shadow: 0 0 12px -5px rgba(#000, .6), inset 0 0 3px -3px rgba($color1, .17);
 
 
 * {
   border: none;
   font-size: 12px;
-  font-family: "Noto Sans Display", "Material";
+  font-family: "Inter Medium", "Material";
   text-shadow: none;
   min-height: 0px; // fake min height;
   margin: 1px 0;
@@ -38,18 +37,20 @@ $shadow: 0 0 8px -3px rgba(#000, .6), inset 0 0 3px -3px rgba($color1, .17);
 
 window#waybar {
   color: $fg;
-  background: darken($bg, 1%);
+  background: $bg;
 }
 
 tooltip {
-  background: rgba($bg, .96);
+  background: rgba($bg, .98);
+
   padding: 0;
 
   label {
     padding: 0 15px;
+    color: $fg;
     margin: 0;
 
-    font-family: "Liberation Sans";
+    font-family: "Inter Medium";
 
     font-size: 14px;
   }
@@ -58,7 +59,7 @@ tooltip {
 /// LEFT
 #workspaces, #taskbar {
   min-height: 0;
-  background-color: lighten($bg, 1%);
+  background-color: rgba(lighten($color0, 5%), .5);
   border-radius: $bd-radius;
   box-shadow: $shadow;
 
@@ -82,7 +83,7 @@ tooltip {
     &.focused {
       color: $fg;
       // border-bottom: 1px solid $color1;
-      background: rgba($color1, .1);
+      background: lighten($color0, 10%);
       // box-shadow: inset 0px -4px 3px -4px $color1; // glow effect
 
       &:hover {
@@ -111,13 +112,13 @@ tooltip {
   font-size: 13px;
   box-shadow: 0 0 8px -3px rgba(#000, .6), inset 0 0 3px -3px rgba($color1, .17);
 
-  background: lighten($bg, 1%);
-  color: $bg;
+  background: rgba(lighten($bg, 5%), .5);
+  color: $fg;
   border-radius: $bd-radius;
 }
 
 #network {
-  background: #C792EA;
+  // background: #C792EA;
 }
 
 #tray {
@@ -128,7 +129,7 @@ tooltip {
 #pulseaudio {
   // border-top-left-radius: $bd-radius;
   // border-bottom-left-radius: $bd-radius;
-  background: #FFCB6B
+  // background: #FFCB6B
 }
 
 
@@ -152,7 +153,7 @@ tooltip {
 }
 
 #battery {
-  background: #82AAFF;
+  // background: #82AAFF;
 
   &.critical:not(.charging) {
     animation: #{batblink} .4s linear infinite alternate;
