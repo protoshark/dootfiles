@@ -28,7 +28,7 @@ set $volume $HOME/.config/sway/scripts/vol.sh
 set $cl_high #252A2F
 set $cl_indi #FA2573
 set $cl_back #151A1F
-set $cl_fore #ACACAC
+set $cl_fore #393E43
 set $cl_forh #FAFAFA
 set $cl_urge #ee2e24
 
